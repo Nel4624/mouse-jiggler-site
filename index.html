@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mouse Jiggler</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse Mover</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🖱️ Mouse Jiggler</h1>
+  <div class="container">
+    <h1>Mouse Mover</h1>
+    <p class="tagline">A physical device that keeps your mouse active.</p>
 
-  <p>A simple physical mouse mover designed to attach to your desk using:</p>
-  <ul>
-    <li>Double-sided tape</li>
-    <li>Rubber feet</li>
-    <li>Corner-style desk mounts</li>
-  </ul>
+    <div class="image-preview">
+      <img id="product-img" src="placeholder.jpg" alt="Mouse Mover Preview" />
+    </div>
 
-  <h2>🔧 Style Options</h2>
-  <p>Available in:</p>
-  <ul>
-    <li>Matte Black</li>
-    <li>Gloss White</li>
-    <li>Clear Blue (Prototype)</li>
-  </ul>
+    <div class="color-picker">
+      <p>Select a colour:</p>
+      <button onclick="changeColor('red')">Red</button>
+      <button onclick="changeColor('blue')">Blue</button>
+      <button onclick="changeColor('black')">Black</button>
+    </div>
 
-  <h2>📸 Image Coming Soon</h2>
-  <div class="placeholder-img">[ Future Product Image Placeholder ]</div>
+    <p class="description">
+      Mount to your desk or table using double-sided tape, rubber inserts, or corner brackets. Small, quiet, and reliable. Just plug it in and you're good to go.
+    </p>
+
+    <button class="interest-btn" onclick="window.location='mailto:youremail@example.com?subject=Mouse Mover Order'">Order Now</button>
+  </div>
+
+  <script>
+    function changeColor(color) {
+      const img = document.getElementById("product-img");
+      img.src = color + "-mouse-mover.jpg"; // you’ll upload red-mouse-mover.jpg etc. later
+    }
+  </script>
 </body>
 </html>
